@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-${PWD%/*samples/*}/scripts/compileWithMaven.sh $* &&  ${PWD%/*samples/*}/scripts/test.sh $*
+RC=0
+
+${PWD%/*samples/*}/scripts/compileWithMaven.sh $*
+
+exit $RC
